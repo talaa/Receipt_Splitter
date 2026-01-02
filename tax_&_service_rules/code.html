@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tax &amp; Service Rules</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>/* Custom radio styles to match the requested design pattern */
+.custom-radio:checked {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCE-Uunz354wJvAo1o5z8T9fEG_oY7i4f6pTupvQOF_hdVpNVkS8g5XwohUCRuBhXsnNLBtBRwIp510DSMWy8xldlnPjrXlbe4Rkxx1o5k6fFeLPGj3iuKjLZwqn1t2z3-42z1FMoxGYdQ2mtraL_IBHpi2447MNVGJdqTn1vUXYkqOIsRCOugGQkbYaJzLbc-6Rrl1O33EC1Ic67x-gj-ltVp7XuRG_11-P_70Vc37NHfPZrHop8SQ-OmQgfrhDWOjhhtyZIixfRI);
+    border-color: #136dec
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-white dark:bg-slate-900">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center bg-white/95 dark:bg-slate-900/95 backdrop-blur p-4 pb-2 justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Tax &amp; Service Rules</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="text-primary hover:text-blue-600 dark:hover:text-blue-400 text-base font-bold leading-normal tracking-[0.015em] shrink-0 transition-colors">Save</button>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto">
+<!-- Headline Section -->
+<div class="pt-8 pb-4 px-6 text-center">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-3xl font-extrabold leading-tight mb-2">Total Tax: <span class="text-primary">$12.50</span></h2>
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-normal">Choose how to distribute this amount</p>
+</div>
+<!-- Radio Options List -->
+<div class="flex flex-col gap-3 p-4">
+<!-- Option 1: Proportional (Default) -->
+<label class="group relative flex items-center gap-4 rounded-xl border-2 border-primary bg-blue-50/50 dark:bg-blue-900/20 p-4 cursor-pointer transition-all hover:shadow-md">
+<input checked="" class="custom-radio peer h-6 w-6 border-2 border-slate-300 dark:border-slate-600 bg-transparent text-transparent checked:bg-white focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary shrink-0 appearance-none rounded-full" name="split-rule" type="radio"/>
+<div class="flex grow flex-col z-10">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">Split Proportionally</p>
+<span class="material-symbols-outlined text-[16px] text-slate-400" title="Calculated based on item share">info</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Based on individual item costs</p>
+</div>
+</label>
+<!-- Option 2: Equally -->
+<label class="group relative flex items-center gap-4 rounded-xl border border-solid border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 cursor-pointer hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all">
+<input class="custom-radio peer h-6 w-6 border-2 border-slate-300 dark:border-slate-600 bg-transparent text-transparent checked:bg-white focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary shrink-0 appearance-none rounded-full" name="split-rule" type="radio"/>
+<div class="flex grow flex-col z-10">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">Split Equally</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Everyone pays the same amount</p>
+</div>
+</label>
+<!-- Option 3: Do Not Split -->
+<label class="group relative flex items-center gap-4 rounded-xl border border-solid border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 cursor-pointer hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all">
+<input class="custom-radio peer h-6 w-6 border-2 border-slate-300 dark:border-slate-600 bg-transparent text-transparent checked:bg-white focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary shrink-0 appearance-none rounded-full" name="split-rule" type="radio"/>
+<div class="flex grow flex-col z-10">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-normal">Do Not Split</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Bill owner absorbs the cost</p>
+</div>
+</label>
+</div>
+<!-- Dynamic Breakdown Preview -->
+<div class="p-4 pt-2">
+<div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-5 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Impact Preview</p>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Dynamic Breakdown</h3>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">pie_chart</span>
+</div>
+</div>
+<!-- Preview List Items -->
+<div class="space-y-3">
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-xs font-bold text-indigo-600 dark:text-indigo-300">AM</div>
+<span class="text-slate-700 dark:text-slate-200 font-medium">Alice M.</span>
+</div>
+<span class="text-slate-900 dark:text-white font-bold bg-white dark:bg-slate-900 px-2 py-1 rounded shadow-sm border border-slate-100 dark:border-slate-700">+$3.00</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-xs font-bold text-emerald-600 dark:text-emerald-300">BS</div>
+<span class="text-slate-700 dark:text-slate-200 font-medium">Bob S.</span>
+</div>
+<span class="text-slate-900 dark:text-white font-bold bg-white dark:bg-slate-900 px-2 py-1 rounded shadow-sm border border-slate-100 dark:border-slate-700">+$2.00</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center text-xs font-bold text-amber-600 dark:text-amber-300">CJ</div>
+<span class="text-slate-700 dark:text-slate-200 font-medium">Charlie J.</span>
+</div>
+<span class="text-slate-900 dark:text-white font-bold bg-white dark:bg-slate-900 px-2 py-1 rounded shadow-sm border border-slate-100 dark:border-slate-700">+$7.50</span>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+<p class="text-xs text-slate-400 dark:text-slate-500 text-center">Calculations update automatically based on selection</p>
+</div>
+</div>
+</div>
+<div class="h-8"></div>
+</div>
+<!-- Sticky Bottom Action (Optional Context) -->
+<div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">check</span>
+                Confirm Rule
+            </button>
+</div>
+</div>
+</body></html>

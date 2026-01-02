@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tracking Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#136dec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101822",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for better mobile feel if content overflows */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 antialiased overflow-x-hidden">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-slate-900 shadow-xl overflow-hidden">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-20 flex items-center bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-100 dark:border-slate-800">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center truncate px-2">Sushi Dinner - Saturday</h2>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">settings</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Hero Stats Section -->
+<div class="pt-6 pb-2 px-4 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">Total Bill</p>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[40px] font-extrabold leading-tight mt-1 mb-6">$120.00</h1>
+<!-- Stats Cards -->
+<div class="flex gap-3 mb-6">
+<div class="flex flex-1 flex-col items-start gap-1 rounded-xl p-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+<p class="text-slate-600 dark:text-slate-300 text-xs font-semibold uppercase">Collected</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-xl font-bold">$85.00</p>
+</div>
+<div class="flex flex-1 flex-col items-start gap-1 rounded-xl p-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-orange-500 text-[20px]">pending</span>
+<p class="text-slate-600 dark:text-slate-300 text-xs font-semibold uppercase">Remaining</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-xl font-bold">$35.00</p>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 mb-2">
+<div class="flex justify-between items-end px-1">
+<p class="text-slate-900 dark:text-white text-sm font-bold">3/5 Paid</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">60% Complete</p>
+</div>
+<div class="rounded-full bg-slate-100 dark:bg-slate-700 h-2 w-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 60%;"></div>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 mx-4 my-2"></div>
+<!-- List Header -->
+<div class="flex items-center justify-between px-6 py-2">
+<h3 class="text-slate-900 dark:text-white text-base font-bold">Participants</h3>
+<button class="text-primary text-sm font-semibold hover:text-primary/80 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Add Person
+                </button>
+</div>
+<!-- List Items -->
+<div class="flex flex-col gap-3 px-4 mt-2">
+<!-- Item 1: Paid (Cash) -->
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden transition-all hover:shadow-md hover:border-primary/30">
+<div class="flex items-center gap-4 p-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 ring-2 ring-slate-100 dark:ring-slate-700" data-alt="Portrait of Alex smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSb6pkd2BB29BOMN5xEY8anJCRT_lcWIAdxIieYn_wTRtvAvwUCQlRmpNyqu_cSyluFtdRvLnTBIuoLRBCeJwtD32Pk4o0DZ6QdvzhnS8O3bFyVpV8Btapbitx89Sxkygf498ODb-Z6-fYLoTeBy0uw-gNJvSDbTJM9VDsK6whOrMwkQb5dU57is00I3cAoOGWE6cjyGY744qx2Cv9IuOLiP-uREisHp6FX1OgWg2yES4uO2mMUrVoX_tko5-kyPIFuOOznCmqyXo");'></div>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-0.5">
+<span class="material-symbols-outlined text-green-600 text-[16px] bg-green-100 dark:bg-green-900/30 rounded-full p-0.5">payments</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold truncate">Alex</p>
+<span class="inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/20 px-2 py-1 text-xs font-bold text-green-700 dark:text-green-400 ring-1 ring-inset ring-green-600/20">Paid</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm truncate">$25.00 • Cash</p>
+<!-- Action Buttons (Hidden by default, visible on hover/focus for demo) -->
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Pending (Card) - Swiped Left State Simulation -->
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl border border-orange-200 dark:border-orange-900/50 shadow-sm overflow-hidden transition-all">
+<!-- Swipe Actions Background (Simulated) -->
+<div class="absolute inset-y-0 right-0 flex w-32">
+<button class="w-1/2 h-full bg-slate-200 dark:bg-slate-600 flex items-center justify-center text-slate-600 dark:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="w-1/2 h-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+<!-- Main Content (Translated slightly to show swipe hint) -->
+<div class="relative bg-white dark:bg-slate-800 flex items-center gap-4 p-4 z-10 translate-x-[-40px] shadow-[-4px_0_12px_rgba(0,0,0,0.05)]">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 ring-2 ring-slate-100 dark:ring-slate-700" data-alt="Portrait of Sarah looking at camera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX7FGEmUnwVSB1MFdVjnuKSGe6pN3v9eS80pihFsSObIY5wBkYL_6Cjoji26nO0nL29Lb3J0NzHKbLQOp8aIDWwxqGYXeEEDl-SZyTw1grNeM0JiDBMVSFOfGZKMpAYM5InF0jVDvQw_Du5ZFT41zPAvvg2BFmvb1fQOVYO0v9Ln0JWqdO0h3ckRkytntW9FqDDceWsQGnEzSEe7RU9z2Li9cZP6AU_cMVnJNVmgLQSJWDb45DkBOrmAX3Vz7CU1raKj634WpkiKw");'></div>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-0.5">
+<span class="material-symbols-outlined text-slate-500 text-[16px] bg-slate-100 dark:bg-slate-700 rounded-full p-0.5">credit_card</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold truncate">Sarah</p>
+<span class="inline-flex items-center rounded-md bg-orange-50 dark:bg-orange-900/20 px-2 py-1 text-xs font-bold text-orange-700 dark:text-orange-400 ring-1 ring-inset ring-orange-600/20">Pending</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm truncate">$30.00 • Credit Card</p>
+<button class="text-primary text-xs font-bold uppercase tracking-wider flex items-center gap-0.5">
+                                    Resend <span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Paid (Venmo) -->
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden transition-all hover:shadow-md hover:border-primary/30">
+<div class="flex items-center gap-4 p-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 ring-2 ring-slate-100 dark:ring-slate-700" data-alt="Portrait of Mike laughing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPh0GO6QKotXyZvVRv8dgRJG18PHjjH3V4mta8tLMbXKXx7nvKJ1ICgISwdlcuGBIo7D6R5vjrblniVxaCTSAXGBwn2Q6hVJ-1DoE2pU3sN_YpWZ5ORb28SezWWH7O3G6hRJtwp7f-KW42Nq4zU7WCwHCVJBuklEEwbRqFsd6W0vzKpEeWhShFu0XqcvfwVMriPXK5xOwD6AmEqU1K1FIN2g4asorhfAlmwkrvNgmEvo1SoABox_wGHWTj26di-eZmSFpWsFRQIG8");'></div>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-0.5">
+<span class="material-symbols-outlined text-blue-500 text-[16px] bg-blue-100 dark:bg-blue-900/30 rounded-full p-0.5">account_balance</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold truncate">Mike</p>
+<span class="inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/20 px-2 py-1 text-xs font-bold text-green-700 dark:text-green-400 ring-1 ring-inset ring-green-600/20">Paid</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm truncate">$30.00 • Venmo</p>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Pending (Venmo) -->
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden transition-all hover:shadow-md hover:border-primary/30">
+<div class="flex items-center gap-4 p-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 ring-2 ring-slate-100 dark:ring-slate-700" data-alt="Portrait of Jessica smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7GUg14pF8GHcEoMm3zVJ30MfE5o7n8SO9aAcwGtiwKd-xyVewPGbpM8L82HQpcvm5tEZ_LBGiZj1jUBE4mxf80BPjNEImHuuuVbyF9Kp-QYMkh_WmBHid0UH-PJXHiUYqvLkO76u49leIP4-PHoStYvfoyZpgysf_yijzs1--pMtfDPHovv9oNu1FaxG0EDyfLRBiI3Lg6m0he1XBudCp8l-KViBgpE71PSNH3Wg2XFVCSrxThG9jEGVezwEXt0CpDgCsPJzVhq8");'></div>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-0.5">
+<span class="material-symbols-outlined text-blue-500 text-[16px] bg-blue-100 dark:bg-blue-900/30 rounded-full p-0.5">account_balance</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold truncate">Jessica</p>
+<span class="inline-flex items-center rounded-md bg-orange-50 dark:bg-orange-900/20 px-2 py-1 text-xs font-bold text-orange-700 dark:text-orange-400 ring-1 ring-inset ring-orange-600/20">Pending</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm truncate">$5.00 • Venmo</p>
+<button class="text-primary text-xs font-bold uppercase tracking-wider flex items-center gap-0.5">
+                                    Resend <span class="material-symbols-outlined text-[14px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 5: Paid (Cash) -->
+<div class="group relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden transition-all hover:shadow-md hover:border-primary/30">
+<div class="flex items-center gap-4 p-4">
+<div class="relative shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 ring-2 ring-slate-100 dark:ring-slate-700" data-alt="Portrait of David looking away" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlzAtxjT2ydhLnyo5Ky2WYfKiltfnqxqEj06ySpiseq1z6W7k_TUSYKofoNKjwtbLbIY5jL5el0r4G0fT6XmpaFyJz_AzgAVE3ahoaisODCS2R_-6fhN27HCCV3cI9vahu1_xruv_KMyfEuSYkn_XAMM4q3FpumRaUwxA0fewtTMSa6wHlL2nN1PJ-x9vdAwucgTTAI39h1e3_NfWMAxfjDhisZCWx6JlH9QJgtLQj25wrC1zVEou7iqmZE4f4n-WZHBpvCRK_B2Y");'></div>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-0.5">
+<span class="material-symbols-outlined text-green-600 text-[16px] bg-green-100 dark:bg-green-900/30 rounded-full p-0.5">payments</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold truncate">David</p>
+<span class="inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/20 px-2 py-1 text-xs font-bold text-green-700 dark:text-green-400 ring-1 ring-inset ring-green-600/20">Paid</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm truncate">$30.00 • Cash</p>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Padding for fixed bottom actions -->
+<div class="h-12"></div>
+</main>
+<!-- Sticky Bottom Action -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg py-4 px-6 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">lock</span>
+                Close Bill &amp; Lock
+            </button>
+</div>
+</div>
+</body></html>

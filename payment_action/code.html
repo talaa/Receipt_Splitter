@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Action</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-500 flex justify-center items-center min-h-screen">
+<!-- Mobile Screen Wrapper -->
+<div class="relative flex h-full min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark shadow-xl overflow-hidden font-display">
+<!-- Header Section -->
+<div class="relative z-10 bg-background-light dark:bg-background-dark pt-2 pb-4 shadow-sm">
+<!-- Drag Handle -->
+<div class="flex justify-center pt-3 pb-1">
+<div class="h-1.5 w-12 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Top App Bar -->
+<div class="flex items-center justify-between px-4 py-2">
+<div class="w-12"></div> <!-- Spacer for balance -->
+<h2 class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Settle Expense</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full w-10 h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content (Scrollable) -->
+<div class="flex-1 overflow-y-auto px-4 pb-8">
+<!-- Recipient Profile & Amount -->
+<div class="flex flex-col items-center gap-6 py-6">
+<!-- Avatar -->
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-24 w-24 border-4 border-white dark:border-slate-800 shadow-md" data-alt="Profile picture of Alice smiling in a park" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyCP7w8dDIwN3Nq4xWhThH-hV6SGkyY1AYVLyEZJM0L4WJI7_Pj0ioBz9ZHNDE3W-Xe4Oka7teKbOAwrIM427EMHRXh5BXkCFD7x332f7k57xm4uCgB4G6vnuDmY5iRShNkPYRa575Kq3JaAmiUB1oxv0qRcadJe5OUptsOO3QChxm3Bvv_8MaYVNEXXWOrqydPp6b8zI272myCT7SIQlnazhDeGsb92Sr7AeD7ytgehfWv3y3poAA6fe-2QZ3V7lHPVNtshHEvE8");'>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary rounded-full p-1.5 border-2 border-white dark:border-slate-800 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-size: 16px;">arrow_outward</span>
+</div>
+</div>
+<!-- Text Info -->
+<div class="flex flex-col items-center justify-center text-center space-y-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide uppercase">Paying Alice</p>
+<h1 class="text-slate-900 dark:text-slate-50 text-5xl font-extrabold tracking-tight">$24.50</h1>
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal pt-2 bg-slate-100 dark:bg-slate-800/50 px-3 py-1 rounded-full">For Pizza Night 🍕</p>
+</div>
+</div>
+<!-- Primary Action: InstaPay -->
+<div class="mt-4 mb-8">
+<button class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-primary hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 active:scale-[0.98]">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-white mr-2" style="font-size: 24px;">account_balance_wallet</span>
+<span class="text-white text-lg font-bold tracking-[0.015em]">Pay via InstaPay</span>
+<span class="material-symbols-outlined text-white ml-2 opacity-70 group-hover:translate-x-1 transition-transform" style="font-size: 20px;">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-slate-400 dark:text-slate-500 mt-2">Opens banking app or WhatsApp deep link</p>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full mb-6"></div>
+<!-- Secondary Actions: Manual Status -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500" style="font-size: 20px;">edit_note</span>
+<h3 class="text-slate-900 dark:text-slate-50 text-base font-bold">Mark status manually</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Pending -->
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 active:bg-slate-100 dark:active:bg-slate-700 transition-colors group">
+<div class="h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" style="font-size: 24px;">pending</span>
+</div>
+<span class="text-slate-700 dark:text-slate-200 font-bold text-sm">Pending</span>
+</button>
+<!-- Paid (Digital) -->
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-green-100 dark:border-green-900/30 bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30 active:bg-green-200 dark:active:bg-green-900/40 transition-colors group">
+<div class="h-10 w-10 rounded-full bg-green-100 dark:bg-green-800 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-green-600 dark:text-green-300" style="font-size: 24px;">check_circle</span>
+</div>
+<span class="text-green-800 dark:text-green-300 font-bold text-sm">Paid</span>
+</button>
+<!-- Cash Pending -->
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 active:bg-slate-100 dark:active:bg-slate-700 transition-colors group">
+<div class="h-10 w-10 rounded-full bg-orange-100 dark:bg-orange-900/50 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400" style="font-size: 24px;">payments</span>
+</div>
+<span class="text-slate-700 dark:text-slate-200 font-bold text-sm">Cash Pending</span>
+</button>
+<!-- Cash Paid -->
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 active:bg-slate-100 dark:active:bg-slate-700 transition-colors group">
+<div class="h-10 w-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400" style="font-size: 24px;">attach_money</span>
+</div>
+<span class="text-slate-700 dark:text-slate-200 font-bold text-sm">Cash Paid</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>
